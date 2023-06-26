@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+  --primary-1: hsl(158, 36%, 37%);
+  --primary-2: hsl(30, 38%, 92%);
+  --neutral-1: hsl(212, 21%, 14%);
+  --neutral-2: hsl(228, 12%, 48%);
+  --neutral-3: hsl(0, 0%, 100%); 
+
+  --font-primary: "Montserrat", serif;
+  --font-secondary: "Fraunces", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.container h1 {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+}
+
+.container h5 {
+  font-family: var(--font-primary);
+  letter-spacing: 1ch;
+  color: var(--neutral-2);
+}
+
+.container p {
+  font-family: var(--font-primary);
+  color: var(--neutral-2);
+  font-size: 14px;
+}
+
+
+.div-price h1:first-child {
+  font-family: var(--font-secondary);
+  color: var(--primary-1);
+  display: inline-block;
+}
+
+.container{
+  background-color: var(--neutral-3);
+  border-radius: 4px;
+}
+
+.grid {
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.div-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.card {
+  padding: 20px;
+  display: grid;
+  justify-content: center;
+  align-self: center;
+  gap: 30px;
+}
+
+.div-price {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.div-price p:first-child{
+  color: var(--primary-1);
+  font-size: 40px;
+  font-family: var(--font-secondary);  
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary-1);
+  font-family: var(--font-primary);
+  color: var(--neutral-3);
+  height: 3rem;
+}
+
+.btn:hover {
+  background-color: hsl(158, 30%, 28%);
+  cursor: pointer;
+}
+
+.div-price p:nth-child(even) {
+  text-decoration: line-through;
+}
+
+@media (max-width: 600px){
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .div-image img {
+    content: url("../images/image-product-mobile.jpg");
+    border-bottom-left-radius: initial;
+    border-top-right-radius: 4px;
+  }
+  .container {
+    margin: 0 20px;
+  }
+}
+
